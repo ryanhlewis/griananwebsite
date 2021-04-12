@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Mists of Grianan</title>
+	<meta name="description" content="Mists of Grianan Landing Page.">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="&#8249;3 The MOG Team">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="./css/modernizr.custom.js"></script>
+</head>
+<div class="global-overlay">
+	<canvas id="constellationel"></canvas>
+	<div class="overlay vegas-container">
+		<div class="vegas-wrapper" style="overflow: hidden; padding: 0px;">
+			<div class="overlay-dash"></div>
+		</div>
+	</div>
+</div>
+</div>
+<section id="home-wrap" class="" style="opacity: 1; display: block;">
+	<div class="content"> <img src="./css/logo.png" alt="" class="brand-logo">
+		<h1><span class="polyfy-title">MISTS OF GRIANAN</span></h1>
+		<p>Coming Soon..
+			<br> 87% Complete</p> <a data-dialog="somedialog" class="action-btn trigger">Notify Me!</a> </div>
+	<div class="social-icons"> <a href="https://twitter.com/MistsOfGrianan"><i class="fa fa-twitter"></i></a> </div>
+</section>
+<div id="somedialog" class="dialog">
+	<div class="dialog__overlay"></div>
+	<div class="dialog__content">
+		<div class="dialog-inner">
+			<h4>Join the Grianan update feed!</h4>
+			<p>Being the first to know always feels great... Signing up to our newsletter gives you <strong>exclusive access to our Grand Opening!</strong></p>
+			<div id="subscribe">
+				<form action="./php/notify-me.php" id="notifyMe" method="POST">
+					<div class="form-group">
+						<div class="controls">
+							<input type="text" id="email" name="email" placeholder="Click here to write your email" onfocus="this.placeholder = &#39;&#39;" onblur="this.placeholder = &#39;Click here to write your email&#39;" class="form-control email srequiredField"> <i class="fa fa-spinner opacity-0"></i>
+							<button class="btn btn-lg submit">Get notified</button>
+							<div class="clear"></div>
+						</div>
+					</div>
+				</form>
+				<div class="block-message">
+					<div class="message">
+						<p class="notify-valid"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button class="close-newsletter" data-dialog-close=""><i class="icon ion-close-round"></i></button>
+	</div>
+</div>
+<script src="./css/jquery.min.js"></script>
+<script src="./css/jquery.easings.min.js"></script>
+<script src="./css/notifyMe.js"></script>
+<script src="./css/vegas-constel.js"></script>
+<script src="./css/classie.js"></script>
+<script src="./css/dialogFx.js"></script>
+<script src="./css/constellation.js"></script>
+<script>
+	 $("#notifyMe").notifyMe(),
+            (function () {
+                var e = document.querySelector("[data-dialog]"),
+                    o = document.getElementById(e.getAttribute("data-dialog")),
+                    t = new DialogFx(o);
+                e.addEventListener("click", t.toggle.bind(t));
+            })();
+</script>
+</body>
+
+</html>
